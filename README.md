@@ -3,6 +3,8 @@
 Pranav Shripannavar · PRN 202501110195 · Division C · Batch C2  
 Operating Systems · Assignment 1 · Unit 2 Process and Thread Management · CO2
 
+Live application: https://process-schedular-phi.vercel.app
+
 ## Problem and OS concept
 
 An AI server receives preprocessing, training, validation, inference and reporting jobs. This simulator applies CPU scheduling to show how selection policy changes completion, turnaround, waiting and response times. A task record represents the scheduling fields of a process control block; the ready queue models runnable processes. This is a single-CPU teaching model, with known bursts, no I/O blocking and zero switching overhead. It does not schedule real OS processes, threads or GPU kernels.
@@ -58,7 +60,9 @@ Open http://localhost:3000. For development, use `npm run dev`.
 2. Keep Next.js as the framework and the repository root as the root directory.
 3. Add `GEMINI_API_KEY` under project Settings → Environment Variables for Production, Preview and Development.
 4. Deploy; if the deployment already exists, open Deployments → latest deployment → Redeploy so it receives the variable.
-5. On the live URL, click **Analyse this workload**. A successful response has the four requested sections. Live evidence and the submission PDF are completed after the production URL is available.
+5. On the live URL, click **Analyse this workload**. A successful response has the four requested sections.
+
+Production verification: the live page and `POST /api/analyze` return HTTP 200; invalid workloads return 400. The HTML and seven JavaScript chunks contain no API key. The supplied key is configured in Production, Preview and Development. The final report includes live execution screenshots and clickable production/repository links.
 
 ## Demonstration and submission
 
